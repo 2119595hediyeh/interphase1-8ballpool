@@ -1,9 +1,9 @@
 var Pool = {
     showDebug: false,
-    RED: 0,
-    YELLOW: 1,
-    WHITE: 2,
-    BLACK: 3,
+    RED: 3,
+    YELLOW: 2,
+    WHITE: 1,
+    BLACK: 0,
 };
 
 Pool.Preloader = function () {};
