@@ -2,8 +2,8 @@ var Pool = {
     showDebug: false,
     RED: 1,
     YELLOW: 0,
-    WHITE: 3,
-    BLACK: 2,
+    WHITE: 2,
+    BLACK: 3,
 };
 
 Pool.Preloader = function () {};
@@ -57,7 +57,7 @@ Pool.MainMenu.prototype = {
 
         var start = this.add.bitmapText(this.world.centerX, 460, 'fat-and-tiny', ' DOUBLE CLICK TO PLAY', 64);
         start.anchor.x = 0.5;
-        start.smoothed = True;
+        start.smoothed = false;
         start.tint = 0xff0000;
 
         this.input.onDown.addOnce(this.start, this);
@@ -66,7 +66,7 @@ Pool.MainMenu.prototype = {
 
     start: function () {
 
-        this.state.start('8 Ball.Pool.Game');
+        this.state.start('Pool.Game');
 
     }
 
