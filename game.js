@@ -1,9 +1,9 @@
 var Pool = {
     showDebug: false,
-    RED: 0,
-    YELLOW: 1,
-    WHITE: 2,
-    BLACK: 3,
+    RED: 1,
+    YELLOW: 0,
+    WHITE: 3,
+    BLACK: 2,
 };
 
 Pool.Preloader = function () {};
@@ -55,9 +55,9 @@ Pool.MainMenu.prototype = {
         var logo = this.add.image(this.world.centerX, 140, 'logo');
         logo.anchor.x = 0.5;
 
-        var start = this.add.bitmapText(this.world.centerX, 460, 'fat-and-tiny', 'CLICK TO PLAY', 64);
+        var start = this.add.bitmapText(this.world.centerX, 460, 'fat-and-tiny', ' DOUBLE CLICK TO PLAY', 64);
         start.anchor.x = 0.5;
-        start.smoothed = false;
+        start.smoothed = True;
         start.tint = 0xff0000;
 
         this.input.onDown.addOnce(this.start, this);
@@ -66,7 +66,7 @@ Pool.MainMenu.prototype = {
 
     start: function () {
 
-        this.state.start('Pool.Game');
+        this.state.start('8 Ball.Pool.Game');
 
     }
 
