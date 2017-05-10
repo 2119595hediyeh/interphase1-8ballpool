@@ -1,7 +1,7 @@
 var Pool = {
     showDebug: false,
-    RED: 1,
-    YELLOW: 0,
+    RED: 0,
+    YELLOW: 1,
     WHITE: 2,
     BLACK: 3,
 };
