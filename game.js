@@ -28,7 +28,7 @@ Pool.Preloader.prototype = {
 
         this.load.bitmapFont('fat-and-tiny');
 
-        this.load.images([ 'logo', 'table', 'cushions', 'cue', 'fill' ]);
+        this.load.images([ 'logo', 'table', 'cushions', 'fill' ]);
 
         this.load.spritesheet('balls', 'balls.png', 26, 26);
 
@@ -38,7 +38,7 @@ Pool.Preloader.prototype = {
 
     create: function () {
 
-        this.state.start('Pool.MainMenu');
+        this.state.start('Pool.MainMenu', 'table');
 
     }
 
