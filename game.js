@@ -444,7 +444,7 @@ Pool.Game.prototype = {
             if (!this.cue.visible)
             {
                 this.cue.visible = true;
-                this.fill.visible = true;
+                this.fill.visible = false;
             }
         }
         else if (this.speed < 3.0)
@@ -462,14 +462,14 @@ Pool.Game.prototype = {
 
     positionShadow: function (ball) {
 
-        ball.shadow.x = ball.x + 4;
-        ball.shadow.y = ball.y + 4;
+        ball.shadow.x = ball.x + 5;
+        ball.shadow.y = ball.y + 5;
 
     },
 
     gameOver: function () {
 
-        this.state.start('Pool.MainMenu');
+        this.state.start('table');
 
     },
 
