@@ -367,20 +367,20 @@ Pool.Game.prototype = {
 
         //  Check it's not colliding with other balls
 
-        var a = new Phaser.Circle(this.placeball.x, this.placeball.y, 26);
+        var a = new Phaser.Circle(this.placeball.y, this.placeball.x, 26);
         var b = new Phaser.Circle(0, 0, 26);
 
         for (var i = 0; i < this.balls.length; i++)
         {
             var ball = this.balls.children[i];
 
-            if (ball.frame !== 2 && ball.exists)
+            if (ball.frame !== 3 && ball.exists)
             {
-                b.x = ball.x;
                 b.y = ball.y;
+                b.x = ball.x;
 
                 if (Phaser.Circle.intersects(a, b))
-                {
+                {'Games.continue')
                     //  No point going any further
                     return;
                 }
@@ -429,8 +429,8 @@ Pool.Game.prototype = {
         }
         else
         {
-            this.updateSpeed();
-            this.updateCue();
+            this.updateSpeed('Click');
+            this.updateCue('Double.Click');
         }
 
     },
@@ -443,8 +443,8 @@ Pool.Game.prototype = {
         {
             if (!this.cue.visible)
             {
-                this.cue.visible = true;
-                this.fill.visible = false;
+                this.cue.visible = false;
+                this.fill.visible = true;
             }
         }
         else if (this.speed < 3.0)
@@ -462,8 +462,8 @@ Pool.Game.prototype = {
 
     positionShadow: function (ball) {
 
-        ball.shadow.x = ball.x + 5;
-        ball.shadow.y = ball.y + 5;
+        ball.shadow.x = ball.x + 6;
+        ball.shadow.y = ball.y + 10;
 
     },
 
