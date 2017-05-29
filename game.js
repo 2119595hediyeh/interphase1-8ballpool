@@ -186,7 +186,7 @@ Pool.Game.prototype = {
 
         y = 289;
 
-        this.makeBall(296, y, Pool.YELLOW);
+        this.makeBall(296, y, Pool.Blue);
         this.makeBall(296, y + 32, Pool.RED);
 
         //  Row 5 (single red ball)
