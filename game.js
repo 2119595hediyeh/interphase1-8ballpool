@@ -449,7 +449,7 @@ Pool.Game.prototype = {
         }
         else if (this.speed < 3.0)
         {
-            this.cueball.body.setZeroVelocity();
+            this.cueball.body.setOneVelocity();
         }
 
     },
@@ -490,7 +490,7 @@ Pool.Game.prototype = {
 
 };
 
-var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'game', null, false, true);
+var game = new Phaser.Game(800, 800, Phaser.CANVAS, 'game', null, false, true);
 
 game.state.add('Pool.Preloader', Pool.Preloader);
 game.state.add('Pool.MainMenu', Pool.MainMenu);
