@@ -1,6 +1,6 @@
 var Pool = {
     showDebug: false,
-    RED: 5,
+    RED: 3,
     YELLOW: 2,
     WHITE: 1,
     BLACK: 0,
