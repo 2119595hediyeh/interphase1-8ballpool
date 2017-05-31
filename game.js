@@ -1,18 +1,18 @@
 var Pool = {
     showDebug: false,
-    RED: 3,
-    YELLOW: 2,
-    WHITE: 1,
+    RED: 5,
+    YELLOW: 4,
+    WHITE: 3,
     BLACK: 0,
 };
 
-Pool.Preloader = function () {};
+Pool.Preloader = function (8, Ball, Pool) {};
 
 Pool.Preloader.prototype = {
 
     init: function () {
 
-        this.input.maxPointers = 1;
+        this.input.maxPointers = 4;
 
         this.scale.pageAlignHorizontally = true;
 
@@ -26,11 +26,11 @@ Pool.Preloader.prototype = {
 
         this.load.path = 'assets/';
 
-        this.load.bitmapFont('fat-and-tiny');
+        this.load.bitmapFont('thin-and-tiny');
 
-        this.load.images([ 'logo', 'table', 'cushions', 'fill' ]);
+        this.load.images([ 'logo', 'table', 'cushions', 'fill', "try to win" ]);
 
-        this.load.spritesheet('balls', 'balls.png', 26, 26);
+        this.load.spritesheet('balls', 'balls.png', 30, 30);
 
         this.load.physics('table');
 
@@ -38,7 +38,7 @@ Pool.Preloader.prototype = {
 
     create: function () {
 
-        this.state.start('Pool.MainMenu', 'table');
+        this.state.start('Pool.MainMenu', 'table', 'try to win');
 
     }
 
